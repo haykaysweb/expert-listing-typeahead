@@ -1,32 +1,14 @@
-# React + TypeScript + Vite
+# Expert Listing Frontend Screening Task
+Modular React + TypeScript + Tailwind CSS typeahead/autocomplete search component querying Open-Meteo Geocoding API.
 
-This template provides a minimal setup to get React working in Vite with HMR and some Oxlint rules.
+## Features
+- Debounced input (300ms)
+- Race condition & stale response cancellation via `AbortController`
+- Keyboard navigation (`ArrowDown`, `ArrowUp`, `Enter`, `Escape`)
+- Reusable sub-components (`SearchInput`, `DropdownList`)
+- Loading, empty, and error feedback states
 
-Currently, two official plugins are available:
-
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
-
-## React Compiler
-
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
-
-## Expanding the Oxlint configuration
-
-If you are developing a production application, we recommend enabling type-aware lint rules by installing `oxlint-tsgolint` and editing `.oxlintrc.json`:
-
-```json
-{
-  "$schema": "./node_modules/oxlint/configuration_schema.json",
-  "plugins": ["react", "typescript", "oxc"],
-  "options": {
-    "typeAware": true
-  },
-  "rules": {
-    "react/rules-of-hooks": "error",
-    "react/only-export-components": ["warn", { "allowConstantExport": true }]
-  }
-}
-```
-
-See the [Oxlint rules documentation](https://oxc.rs/docs/guide/usage/linter/rules) for the full list of rules and categories.
+## Run Locally
+```bash
+npm install
+npm run dev
